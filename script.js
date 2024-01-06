@@ -166,6 +166,14 @@ if(userOptions.useUppercase === true)  {
   userChoiceCharacters = userChoiceCharacters.concat(upperCasedCharacters);
 }
 
+var passwordGenerated= "";
+for(var i=0; i< userOptions.passwordLength;i++ ){
+var randomPassword= getRandom(userChoiceCharacters);
+passwordGenerated += randomPassword;
+}
+
+alert("Your Generated Password is:" +passwordGenerated)
+return passwordGenerated ;
 
 }
 
