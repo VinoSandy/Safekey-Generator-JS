@@ -91,6 +91,38 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 function getPasswordOptions() {
 
+  var passwordLength= prompt("Enter the Length of the password(Length should be between 8 and 128):");
+
+  if(!passwordLength){
+    return null
+  }
+  
+  else if(isNaN(passwordLength) || passwordLength<8 || passwordLength > 128)
+  {
+     alert("Password Length should be between atleast  8 characters but no more than 128");
+     return null;
+  }
+
+  var useLowercase = confirm("Do you want to include lowercase letters?");
+  var useUppercase = confirm("Do you want to include uppercase letters?");
+  var useNumeric = confirm("Do you want to include numeric characters?");
+  var useSpecialChar = confirm("Do you want include special characters?");
+
+  if (!useSpecialChar && !useNumeric && !useLowercase && !useUppercase) {
+    alert("Please select at least one character type.");
+    return null;
+  }
+
+  return{
+    passwordLength: passwordLength,
+    useLowercase: useLowercase,
+    useUppercase: useUppercase,
+    useNumeric: useNumeric,
+    useSpecialChar: useSpecialChar
+  };
+
+
+
 }
 
 // Function for getting a random element from an array
@@ -100,6 +132,8 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+
+  var userOptions= getPasswordOptions();
 
 }
 
