@@ -143,13 +143,15 @@ return arr[random];
 function generatePassword() {
 
   var userOptions= getPasswordOptions();
-
+//if useroptions are null (user canceled when prompted)
   if (!userOptions) {
     return null;
   }
 
+  //Declared an Array to store user created option
   var userChoiceCharacters=[];
 
+  //checks user's characters option and userChoiceCharacters array updated accordingly
   if(userOptions.useLowercase === true)  
 {
   userChoiceCharacters= userChoiceCharacters.concat(lowerCasedCharacters);
@@ -166,6 +168,7 @@ if(userOptions.useUppercase === true)  {
   userChoiceCharacters = userChoiceCharacters.concat(upperCasedCharacters);
 }
 
+//Generates Password by invoking getRandom function
 var passwordGenerated= "";
 for(var i=0; i< userOptions.passwordLength;i++ ){
 var randomPassword= getRandom(userChoiceCharacters);
