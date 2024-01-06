@@ -144,6 +144,29 @@ function generatePassword() {
 
   var userOptions= getPasswordOptions();
 
+  if (!userOptions) {
+    return null;
+  }
+
+  var userChoiceCharacters=[];
+
+  if(userOptions.useLowercase === true)  
+{
+  userChoiceCharacters= userChoiceCharacters.concat(lowerCasedCharacters);
+}
+
+if(userOptions.useNumeric === true)
+{
+  userChoiceCharacters= userChoiceCharacters.concat(numericCharacters);
+}
+if(userOptions.useSpecialChar === true){
+  userChoiceCharacters= userChoiceCharacters.concat(specialCharacters);
+}
+if(userOptions.useUppercase === true)  {
+  userChoiceCharacters = userChoiceCharacters.concat(upperCasedCharacters);
+}
+
+
 }
 
 // Get references to the #generate element
