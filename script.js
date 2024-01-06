@@ -88,7 +88,7 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Function to prompt user for password options
+/* Function to prompt user for password options*/
 function getPasswordOptions() {
 
   //Gets Password Length from User
@@ -131,7 +131,7 @@ function getPasswordOptions() {
 }
 
 
-// Function for getting a random element from an array
+/* Function for getting a random element from an array*/
 function getRandom(arr) {
 
 var random= Math.floor(Math.random() * arr.length);
@@ -139,7 +139,7 @@ return arr[random];
 
 }
 
-// Function to generate password with user input
+/* Function to generate password with user input*/
 function generatePassword() {
 
   var userOptions= getPasswordOptions();
