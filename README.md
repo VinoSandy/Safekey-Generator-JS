@@ -69,6 +69,12 @@ The above demo shows how password is generated as per users choice.
 
 The above demo covers all the negative secnario like when user selects cancel , user selects length not in the given range and user did not choose not one single character option.
 
+# Git Hub URL:
+   https://github.com/VinoSandy/Safekey-Generator-JS.git
+
+# URL of Deployed Application:
+  https://vinosandy.github.io/Safekey-Generator-JS/
+  
 
 
   
